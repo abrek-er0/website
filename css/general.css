@@ -7,6 +7,7 @@
 
 *{
 	box-sizing: border-box;
+	font-family: "Times New Roman", Times, serif;
 }
 
 body{
@@ -14,35 +15,35 @@ body{
 	padding: 0;
 }
 
-header, footer{
+#header, #footer{
 	background-color: var(--header-footer);
 	text-align: center;
 }
 
-footer h1{
+#footer h1{
 	color: var(--header-header);
 	float: right;
 	text-shadow: 0px 1px red, 1px 0px cyan, 1px 1px 3px ghostwhite;
 }
 
-header h1{
+#header h1{
 	color: var(--header-header);
 	display: inline-block;
-	font-size: 400%;
+	font-size: 5vw;
 	text-shadow: 0px 1px red, 1px 0px cyan, 1px 1px 3px ghostwhite;
 }
 
-nav{
+#nav{
 	background-color: var(--nav-bg);
 }
 
-nav ul{
+#nav ul{
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-nav li{
+#nav li{
 	display: inline-block;
 	float: right;
 	margin: 1%;
@@ -50,10 +51,15 @@ nav li{
 	background-color: var(--nav-item);
 	width: 10%;
 	border-radius: 5%;
-	border-r
+	transition: background-color 1s;
+	font-size: 1.5vw;
 }
 
-nav a{
+#nav li:hover{
+	background-color: #1c1c1c;
+}
+
+#nav a{
 	display: inline-block;
 	color: ghostwhite;
 	text-decoration-line: none;
@@ -62,15 +68,14 @@ nav a{
 	text-align: center;
 }
 
-footer{
-	position: fixed;
-	bottom: 0;
-}
-
-footer img{
+#footer img{
 	float: left;
 	object-fit: contain;
-	max-width: 100px;
+	width: 8vw;
+}
+
+#footer h1{
+	font-size: 3vw;
 }
 
 .col-1 {width: 8.33%;}
@@ -89,4 +94,20 @@ footer img{
 [class*="col-"] {
   float: left;
   padding: 15px;
+}
+
+
+
+@media screen and (max-width: 768px){
+	#nav li{float: none;
+		width: 100%;
+		display: inline-block;
+		margin: 1% 0 1% 0;}
+	#nav a{
+		padding:20px 10px 20px 10px;
+	}
+
+	[class*="col-"] {
+  	width: 100%;
+}
 }
