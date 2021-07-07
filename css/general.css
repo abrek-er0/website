@@ -1,0 +1,92 @@
+:root{
+	--header-footer: #07120c;
+	--header-header: #ffffff;
+	--nav-bg: #e32f0b;
+	--nav-item: #000000;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+header, footer{
+	background-color: var(--header-footer);
+	text-align: center;
+}
+
+footer h1{
+	color: var(--header-header);
+	float: right;
+	text-shadow: 0px 1px red, 1px 0px cyan, 1px 1px 3px ghostwhite;
+}
+
+header h1{
+	color: var(--header-header);
+	display: inline-block;
+	font-size: 400%;
+	text-shadow: 0px 1px red, 1px 0px cyan, 1px 1px 3px ghostwhite;
+}
+
+nav{
+	background-color: var(--nav-bg);
+}
+
+nav ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav li{
+	display: inline-block;
+	float: right;
+	margin: 1%;
+	align-content: center;
+	background-color: var(--nav-item);
+	width: 10%;
+	border-radius: 5%;
+	border-r
+}
+
+nav a{
+	display: inline-block;
+	color: ghostwhite;
+	text-decoration-line: none;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+footer img{
+	float: left;
+	object-fit: contain;
+	max-width: 100px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
