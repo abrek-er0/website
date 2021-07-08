@@ -24,6 +24,7 @@ body{
 	color: var(--header-header);
 	float: right;
 	text-shadow: 0px 1px red, 1px 0px cyan, 1px 1px 3px ghostwhite;
+	font-size: 3rem;
 }
 
 #header h1{
@@ -74,10 +75,6 @@ body{
 	float: left;
 	object-fit: contain;
 	width: 8rem;
-}
-
-#footer h1{
-	font-size: 3rem;
 }
 
 #gameholder{
