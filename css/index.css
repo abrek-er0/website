@@ -5,11 +5,11 @@ h2{
  	animation-duration: 2s;
  	animation-fill-mode: both;
  	opacity: 0;
- 	font-size: 3vw;
+ 	font-size: 3rem;
 }
 
 p{
-	font-size: 2vw;
+	font-size: 2rem;
 	font-weight: bold;
     color: black;
   	animation-name: emerge;
@@ -22,3 +22,9 @@ p{
   50%  {opacity: 0;}
   100% {opacity: 100;}
 }
+
+@media screen and (max-width: 768px){
+	p{
+		font-size: 1.5rem;
+	}
+	}
