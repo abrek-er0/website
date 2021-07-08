@@ -14,3 +14,4 @@ function  create_li(href, inner){
 }
 
 create_li("notepad.html", "NotePad");
+create_li("notepad.html", "Test");
