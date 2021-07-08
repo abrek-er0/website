@@ -1,0 +1,26 @@
+textarea{
+  font-size: 1rem;
+  color: black;
+  resize: none;
+}
+
+#buttons textarea{
+	width: 100%;
+}
+
+#buttons button{
+	font-size: 0.8rem;
+	color: ghostwhite;
+	background-color: black;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 0.2rem;
+}
+
+#buttons button:hover{
+	background-color: firebrick;
+}
+
+#buttons button:active{
+	background-color: red;
+}

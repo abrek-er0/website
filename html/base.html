@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Main</title>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/general.css">
+	<script type="text/javascript" src ="../js/add_games.js" defer></script>
+</head>
+<body>
+	<header id="header" class="col-12"><h1>WELCOME!</h1></header>
+	<nav id="nav" class="col-12">
+		<button id="expandMenu">&#8801;</button>
+		<div id="menu">
+		<ul>
+			<li><a href="../index.html">HOME</a></li>
+			<li id="games" ><a id="gamelink"href="#">GAMES&#8659;</a>
+				<div id="gameholder"><ul id="c_games"></ul></div></li>
+			<li><a href="#">CONTACT</a></li>
+		</ul></div>
+	</nav>
+	<div id="content" class="col-12">
+		<h2>HI,</h2>
+		<p >This website will be my personal website. I'll try to apply some concepts and even some basic games with JavaScript.</p>
+	</div>
+	<footer id="footer" class="col-12">
+		<img src="../images/content2.png">
+		<h1>Abrek</h1></footer>
+		<script type="text/javascript">
+			document.getElementById("gamelink").addEventListener("mouseenter", function(event){
+				event.target.innerHTML = 'GAMES&#8658;'
+			});
+			document.getElementById("gamelink").addEventListener("mouseleave", function(event){
+				event.target.innerHTML = 'GAMES&#8659;'
+			});
+			var coll = document.getElementById("expandMenu");
+  			coll.addEventListener("click", function() {
+    		this.classList.toggle("active");
+    		var content = document.getElementById("menu");
+    		if (content.style.display === "block") {
+      			content.style.display = "none";
+      				coll.style.transform ="rotate(0)";
+    			} else {
+    				coll.style.transform ="rotate(90deg)";
+      		content.style.display = "block";
+      	}});
+		</script>
+</body>
+</html>
