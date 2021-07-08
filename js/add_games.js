@@ -4,7 +4,7 @@ function  create_li(href, inner){
 	let a = document.createElement("a");
 	var path = window.location.pathname;
 	var page = path.split("/").pop();
-	if(!page.localeCompare("index.html")){
+	if(!page.localeCompare("index.html") ||!path.localeCompare("/website/")){
 		href = "./html/" + href;
 		alert("hi");
 	}
