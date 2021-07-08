@@ -6,6 +6,7 @@ function  create_li(href, inner){
 	var page = path.split("/").pop();
 	if(!page.localeCompare("index.html")){
 		href = "./html/" + href;
+		alert("hi");
 	}
 	a.href = href;
 	a.innerHTML = inner;
