@@ -34,74 +34,75 @@
 	</div>
 	<footer id="footer" class="col-12">
 		<img src="../images/content2.png">
-		<h1>Abrek</h1></footer>
+		<h1>Abrek</h1>
+	</footer>
 		<script type="text/javascript">
-			document.getElementById("gamelink").addEventListener("mouseenter", function(event){
-				event.target.innerHTML = 'GAMES&#8658;'
-			});
-			document.getElementById("gamelink").addEventListener("mouseleave", function(event){
-				event.target.innerHTML = 'GAMES&#8659;'
-			});
-			var coll = document.getElementById("expandMenu");
-  			coll.addEventListener("click", function() {
-    		this.classList.toggle("active");
-    		var content = document.getElementById("menu");
-    		if (content.style.display === "block") {
-      			content.style.display = "none";
-      				coll.style.transform ="rotate(0)";
-    			} else {
-    				coll.style.transform ="rotate(90deg)";
-      		content.style.display = "block";
-      	}});
-  			function reset(){
-				let a = document.getElementById("text");
-				a.value ="";}
+		document.getElementById("gamelink").addEventListener("mouseenter", function(event){
+			event.target.innerHTML = 'GAMES&#8658;'
+		});
+		document.getElementById("gamelink").addEventListener("mouseleave", function(event){
+			event.target.innerHTML = 'GAMES&#8659;'
+		});
+		var coll = document.getElementById("expandMenu");
+  		coll.addEventListener("click", function() {
+   		this.classList.toggle("active");
+   		var content = document.getElementById("menu");
+   		if (content.style.display === "block") {
+     		content.style.display = "none";
+      			coll.style.transform ="rotate(0)";
+    		} else {
+    			coll.style.transform ="rotate(90deg)";
+      	content.style.display = "block";
+    }});
+  		function reset(){
+			let a = document.getElementById("text");
+			a.value ="";}
 
-			function encrypt(){
-				let a = document.getElementById("text");
-				let text = a.value;
-				let e_arr = [];
-				let key = document.getElementById("key").value;
-				let len = key.length;
-				if(!len || !text.length){
-					alert("Text or key section can't be empty.");
-				}else{
-					for (let i = 0; i < text.length; i++){
-						let diff = text.charCodeAt(i) + key.charCodeAt(i % len) - 130;
-						e_arr.push(diff);
-					}
-					a.value = e_arr.join(" ");
+		function encrypt(){
+			let a = document.getElementById("text");
+			let text = a.value;
+		    let e_arr = [];
+			let key = document.getElementById("key").value;
+			let len = key.length;
+			if(!len || !text.length){
+				alert("Text or key section can't be empty.");
+			}else{
+				for (let i = 0; i < text.length; i++){
+					let diff = text.charCodeAt(i) + key.charCodeAt(i % len) - 130;
+					e_arr.push(diff);
 				}
+				a.value = e_arr.join(" ");
 			}
-			function decrypt(){
-				let a = document.getElementById("text");
-				let text = a.value.split(" ");
-				let d_arr = [];
-				let key = document.getElementById("key").value;
-				let len = key.length;
-				if(!len || !text.length){
-					alert("Text or key section can't be empty.");
-				}else{
-					for (let i = 0; i < text.length; i++){
-						let result = parseInt(text[i]) - key.charCodeAt(i % len) + 65;
-						let char = String.fromCharCode(result + 65);
-						d_arr.push(char);
-					}
-					a.value = d_arr.join("");
+		}
+		function decrypt(){
+			let a = document.getElementById("text");
+			let text = a.value.split(" ");
+			let d_arr = [];
+			let key = document.getElementById("key").value;
+			let len = key.length;
+			if(!len || !text.length){
+				alert("Text or key section can't be empty.");
+			}else{
+				for (let i = 0; i < text.length; i++){
+					let result = parseInt(text[i]) - key.charCodeAt(i % len) + 65;
+					let char = String.fromCharCode(result + 65);
+					d_arr.push(char);
 				}
+				a.value = d_arr.join("");
 			}
+		}
+		
+		function save(){
+			let a = document.getElementById("text");
+			let b = document.getElementById("word");
+			localStorage.setItem("text" + b.value, a.value);
+		}
 
-			function save(){
-				let a = document.getElementById("text");
-				let b = document.getElementById("word");
-				localStorage.setItem("text" + b.value, a.value);
-			}
-
-			function load(){
-				let a = document.getElementById("text");
-				let b = document.getElementById("word");
-				a.value = localStorage.getItem("text" + b.value);
-			}
-		</script>
+		function load(){
+			let a = document.getElementById("text");
+			let b = document.getElementById("word");
+			a.value = localStorage.getItem("text" + b.value);
+		}
+	</script>
 </body>
 </html>

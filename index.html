@@ -26,25 +26,26 @@
 	</div>
 	<footer id="footer" class="col-12">
 		<img src="./images/content2.png">
-		<h1>Abrek</h1></footer>
-		<script type="text/javascript">
-			document.getElementById("gamelink").addEventListener("mouseover", function(event){
-				event.target.innerHTML = 'GAMES&#8658;'
-			});
-			document.getElementById("gamelink").addEventListener("mouseleave", function(event){
-				event.target.innerHTML = 'GAMES&#8659;'
-			});
-			var coll = document.getElementById("expandMenu");
-  			coll.addEventListener("click", function() {
-    		this.classList.toggle("active");
-    		var content = document.getElementById("menu");
-    		if (content.style.display === "block") {
-      			content.style.display = "none";
-      				coll.style.transform ="rotate(0)";
-    			} else {
-    				coll.style.transform ="rotate(90deg)";
-      		content.style.display = "block";
-      	}});
-		</script>
+		<h1>Abrek</h1>
+	</footer>
+	<script type="text/javascript">
+		document.getElementById("gamelink").addEventListener("mouseover", function(event){
+			event.target.innerHTML = 'GAMES&#8658;'
+		});
+		document.getElementById("gamelink").addEventListener("mouseleave", function(event){
+			event.target.innerHTML = 'GAMES&#8659;'
+		});
+		var coll = document.getElementById("expandMenu");
+  		coll.addEventListener("click", function() {
+    	this.classList.toggle("active");
+    	var content = document.getElementById("menu");
+    	if (content.style.display === "block") {
+      		content.style.display = "none";
+      			coll.style.transform ="rotate(0)";
+    		} else {
+    			coll.style.transform ="rotate(90deg)";
+      	content.style.display = "block";
+      }});
+	</script>
 </body>
 </html>
